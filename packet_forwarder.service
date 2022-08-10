@@ -1,0 +1,14 @@
+[Unit]
+Description=Packet Forwarder Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=Db50Gw
+ExecStart=/home/Db50Gw/Desktop/forwarder.sh
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
+
